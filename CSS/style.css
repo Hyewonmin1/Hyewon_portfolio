@@ -15,7 +15,7 @@
   --color-gray: #1b1e26;
 
   /* Size*/
-  --size-max-with: 1200px;
+  --size-max-width: 1200px;
 }
 
 * {
@@ -204,21 +204,30 @@ button:focus {
 }
 
 .jobs {
-  text-align: start;
+  text-align: left;
 }
 
 .job {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   margin-bottom: 1rem;
+}
+
+.job__image {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
 }
 
 .job__name {
   color: var(--color-primary);
+  text-align: left;
 }
 
 .job__period {
   color: var(--color-primary);
   font-size: 0.8rem;
+  text-align: left;
 }
