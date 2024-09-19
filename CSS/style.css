@@ -63,7 +63,8 @@ button:focus {
 
 .max-container {
   max-width: var(--size-max-width);
-  margin: auto;
+  margin: 0 auto; /* 상하 마진을 0으로 설정 */
+  text-align: center; /* 내부 텍스트를 가운데 정렬 */
 }
 
 .title {
@@ -171,12 +172,14 @@ button:focus {
 /* About */
 .majors {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
   margin: 2.5rem 0;
 }
 
 .major {
+  flex: 1 1 calc(33.333% - 1rem);
   background-color: var(--color-primary-variant);
   padding: 2rem 1rem;
   color: var(--color-text);
@@ -185,6 +188,10 @@ button:focus {
   box-shadow: 22px 24px 10px -9px rgba(165, 165, 165, 0.75);
   -webkit-box-shadow: 22px 24px 10px -9px rgba(165, 165, 165, 0.75);
   -moz-box-shadow: 22px 24px 10px -9px rgba(165, 165, 165, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .major__icon {
@@ -204,22 +211,31 @@ button:focus {
   transform: rotate(-15deg) scale(1.2);
 }
 
-.jobs {
-  padding: 0;
-  margin: 0;
-}
-
 .job {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 1rem;
+  background-color: var(--color-primary-variant);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 22px 24px 10px -9px rgba(165, 165, 165, 0.75);
 }
 
 .job__image {
   width: 150px;
   height: 100px;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.job__image-container {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .job__details {
@@ -229,17 +245,17 @@ button:focus {
 }
 
 .job__name {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: 1.2rem;
 }
 
 .job__period {
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: 0.8rem;
 }
 
 /* Skills*/
-#Skills {
+#skills {
   background-color: var(--color-primary-variant);
   color: var(--color-text);
   padding: 4rem 0;
@@ -305,7 +321,7 @@ button:focus {
 }
 
 /* Work */
-#Work {
+#work {
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 4rem 0;
@@ -330,6 +346,7 @@ button:focus {
   border: 1px solid var(--color-accent);
   cursor: pointer;
   white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .category--selected {
@@ -355,4 +372,99 @@ button:focus {
 .category:hover .category__count {
   opacity: 1;
   top: 0;
+}
+
+/* Projects Grid */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center; /* 그리드 컨테이너를 가운데 정렬 */
+  justify-items: center; /* 그리드 아이템을 가운데 정렬 */
+}
+
+.project {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project__img {
+  width: 100%;
+  height: 200px; /* 고정 높이 설정 */
+  object-fit: cover;
+  display: block;
+}
+
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 10, 19, 0.8); /* 투명한 배경색 */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project:hover .project__metadata {
+  opacity: 1;
+}
+
+.project__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project__metadata p {
+  font-size: 1rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .project__img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project__img {
+    height: 150px;
+  }
 }

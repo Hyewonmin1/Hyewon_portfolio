@@ -15,8 +15,11 @@
     <!-- OG (Open Graph Data) -->
     <meta property="og:title" content="Hyewon Min" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="배포후 생성된 URL" />
-    <meta property="og:image" content="배포후에 생성된 이미지 URL" />
+    <meta property="og:url" content="https://your-deployed-site.com" />
+    <meta
+      property="og:image"
+      content="https://your-deployed-site.com/images/og-image.png"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +29,10 @@
     />
     <!-- Font Awesome -->
     <script
-      src="https://kit.fontawesome.com/4c2c88b1a8.js" crossorigin="anonymous" defer></script>
+      src="https://kit.fontawesome.com/4c2c88b1a8.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Javascript -->
@@ -35,159 +41,250 @@
   <body>
     <!-- Header -->
     <header class="header">
-        <div class="header__logo">
-            <img class="header__logo__img" src="images/favicon.ico" alt="logo">
-            <h1 class="header__logo__title"><a href="#">Hyewon</a></h1>
-        </div>
-        <nav>
-            <ul class="header__menu">
-                <li><a class="header__menu__item active" href="#Home">Home</a></li>
-                <li><a class="header__menu__item" href="#About me">About me</a></li>
-                <li><a class="header__menu__item" href="#Skills">Skills</a></li>
-                <li><a class="header__menu__item" href="#Work">Work</a></li>
-                <li><a class="header__menu__item" href="#Contact">Contact</a></li>
-            </ul>
-        </nav>
+      <div class="header__logo">
+        <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
+        <h1 class="header__logo__title"><a href="#">Hyewon</a></h1>
+      </div>
+      <nav>
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item" href="#about-me">About me</a></li>
+          <li><a class="header__menu__item" href="#skills">Skills</a></li>
+          <li><a class="header__menu__item" href="#work">Work</a></li>
+          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Main -->
     <main>
       <!-- Home -->
       <section id="home">
-        <img class="home__avatar" src="images/Photo_Hyewon-modified.png" alt="Hyewon's profile">
-        <h2 class="home__title">Hello<br />I&#39;m a <strong class="home__title--strong">Digital Marketer</strong>, Hyewon</h2>
-        <p class="home__description">A digital marketer currently residing in Vancouver, Canada</p>
+        <img
+          class="home__avatar"
+          src="images/Photo_Hyewon-modified.png"
+          alt="Hyewon's profile"
+        />
+        <h2 class="home__title">
+          Hello<br />I&#39;m a
+          <strong class="home__title--strong">Digital Marketer</strong>, Hyewon
+        </h2>
+        <p class="home__description">
+          A digital marketer currently residing in Vancouver, Canada
+        </p>
         <a class="home__contact" href="#contact">Contact Me</a>
       </section>
       <!-- About me -->
-      <section id="About me" class="section max-container">
-       <h2 class="title">About me</h2>
-       <p class="description">
-        I am a digital marketer with a passion for combining creativity with data-driven strategies. With a background in accounting and experience in optimizing digital marketing campaigns, I bring strong analytical and creative skills to every project. Currently, I'm expanding my expertise in website management and design to create impactful online experiences.
-       </p>
-       <ul class="majors">
-        <li class="major">
+      <section id="about-me" class="section max-container">
+        <h2 class="title">About Me</h2>
+        <p class="description">
+          I am a digital marketer with a passion for combining creativity with
+          data-driven strategies. With a background in accounting and experience
+          in optimizing digital marketing campaigns, I bring strong analytical
+          and creative skills to every project. Currently, I'm expanding my
+          expertise in website management and design to create impactful online
+          experiences.
+        </p>
+        <ul class="majors">
+          <li class="major">
             <i class="fa-solid fa-magnifying-glass-chart major__icon"></i>
             <p class="major__title">Analytical</p>
-            <p>Data Analysis, 
-            Google Analytics,
-            Financial Reporting</p>
-        </li>
-        <li class="major">
+            <p>Data Analysis, Google Analytics, Financial Reporting</p>
+          </li>
+          <li class="major">
             <i class="fa-solid fa-lightbulb major__icon"></i>
             <p class="major__title">Creative</p>
             <p>Website Design, Content Creation, Digital Campaigns</p>
-        </li>
-        </ul>
-        <li class="major">
+          </li>
+          <li class="major">
             <i class="fa-solid fa-arrow-up-right-dots major__icon"></i>
             <p class="major__title">Growth-Oriented</p>
-            <p>Continuous Learning, Trend Analysis, Multilingual (Korean, English)</p>
-        </li>
-        <li class="job">
-            <img class="job__image" src="images/Jobs/Lunit..png" alt="Lunit">
-        <div class="job__details">
-            <p class="job__name">Accounting Manager</p>
-            <p class="job__period">2021 Nov - 2024 Feb</p>
-        </div>
-    </li>
+            <p>
+              Continuous Learning, Trend Analysis, Multilingual (Korean,
+              English)
+            </p>
+          </li>
+          <li class="job">
+            <div class="job__image-container">
+              <img
+                class="job__image"
+                src="images/Jobs/Lunit..png"
+                alt="Lunit"
+              />
+            </div>
+            <div class="job__details">
+              <p class="job__name">Accounting Manager</p>
+              <p class="job__period">2021 Nov - 2024 Feb</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
       <!-- Skills -->
-      <section id="Skills" class="section">
-       <div class="max-container"> 
-        <h2 class="title">My Skills</h2>
-        <p class="description">Skills & Attributes</p>
-        <p>
-            Experienced in data-driven digital marketing strategies and financial analysis, with strong expertise in managing marketing campaigns, optimizing ROI, and handling complex accounting systems. Proficient in using advanced tools for both fields.
-        </p>
-        <div class="skills">
-           <section class="skills_technical">
-            <h3 class="skills_title">Technical Proficiency</h3>
-            <ul>
-                <li class="bar">                        
-                    <div class="bar__metadata"><span>SAP Accounting, Concur</span><span>98%</span></div>
-                   <div class="bar__bg"><div class="bar__value" style="width: 98%;"></div></div>
+      <section id="skills" class="section">
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">Skills & Attributes</p>
+          <p>
+            Experienced in data-driven digital marketing strategies and
+            financial analysis, with strong expertise in managing marketing
+            campaigns, optimizing ROI, and handling complex accounting systems.
+            Proficient in using advanced tools for both fields.
+          </p>
+          <div class="skills">
+            <section class="skills_technical">
+              <h3 class="skills_title">Technical Proficiency</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>SAP Accounting, Concur</span><span>98%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 98%"></div>
+                  </div>
                 </li>
                 <li class="bar">
-                    <div class="bar__metadata"><span>Google Analytics</span><span>93%</span></div>
-                   <div class="bar__bg"><div class="bar__value" style="width: 93%;"></div></div>
+                  <div class="bar__metadata">
+                    <span>Google Analytics</span><span>93%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 93%"></div>
+                  </div>
                 </li>
                 <li class="bar">
-                    <div class="bar__metadata"><span>Google Ads</span><span>95%</span></div>
-                   <div class="bar__bg"><div class="bar__value" style="width: 95%;"></div></div>
+                  <div class="bar__metadata">
+                    <span>Google Ads</span><span>95%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 95%"></div>
+                  </div>
                 </li>
                 <li class="bar">
-                    <div class="bar__metadata"><span>HTML, CSS</span><span>90%</span></div>
-                   <div class="bar__bg"><div class="bar__value" style="width: 90%;"></div></div>
+                  <div class="bar__metadata">
+                    <span>HTML, CSS</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
                 </li>
-            </ul>
-           </section>
-           <section class="skills_certifications">
-            <h3 class="skills_title">Certifications</h3>
-            <ul>
+              </ul>
+            </section>
+            <section class="skills_certifications">
+              <h3 class="skills_title">Certifications</h3>
+              <ul>
                 <li>American Marketing Association PCM Marketing Management</li>
                 <li>Google Analytics</li>
                 <li>Google Ads</li>
-            </ul>
-           </section>
-           <section class="skills_languages">
-            <h3 class="skills_title">Languages</h3>
-            <ul>
+              </ul>
+            </section>
+            <section class="skills_languages">
+              <h3 class="skills_title">Languages</h3>
+              <ul>
                 <li>Korean-Native</li>
                 <li>English-Fluent</li>
-            </ul>
-           </section>
-        </div></div>
+              </ul>
+            </section>
+          </div>
+        </div>
       </section>
+
       <!-- Work -->
-      <section id="Work" class="section">
-       <div class="max-container"> 
-        <h2 class="title">My Work</h2>
-        <p class="description">Projects</p>
-        <ul class="categories">
-            <li><button class="category category--selected">All <span class="category__count">3</span></button></li>
-            <li><button class="category">Digital Marketing <span class="category__count">1</span></button></li>
-            <li><button class="category">Analytics <span class="category__count">1</span></button></li>
-            <li><button class="category">SEO Optimization<span class="category__count">1</span></button></li>
-        </ul>
-        <ul><li><a href="#" target="_blank">
-            <img src="images/Projects/project1.webp" alt="project1">
-            <div>
-                <h3>Project #1</h3>
-                <p>Comprehensive Digital Marketing Strategy for a Local Business</p>
-            </div>
-        </a></li>
-        <li><a href="#" target="_blank">
-            <img src="images/Projects/project2.webp" alt="project2">
-            <div>
-                <h3>Project #2</h3>
-                <p> Data-Driven Marketing: A/B Testing & Conversion Optimization</p>
-            </div></a></li>
-        <li><a href="#" target="_blank">
-            <img src="images/Projects/project3.webp" alt="project3">
-            <div>
-                <h3>Project #3</h3>
-                <p>SEO & Content Strategy for an E-Commerce Site</p>
-            </div></a></li></ul></div>
+      <section id="work" class="section">
+        <div class="max-container">
+          <h2 class="title">My Work</h2>
+          <p class="description">Projects</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected">
+                All <span class="category__count">3</span>
+              </button>
+            </li>
+            <li>
+              <button class="category">
+                Digital Marketing <span class="category__count">1</span>
+              </button>
+            </li>
+            <li>
+              <button class="category">
+                Analytics <span class="category__count">1</span>
+              </button>
+            </li>
+            <li>
+              <button class="category">
+                SEO Optimization<span class="category__count">1</span>
+              </button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="images/Projects/project1.webp"
+                  alt="Project 1"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #1</h3>
+                  <p>
+                    Comprehensive Digital Marketing Strategy for a Local
+                    Business
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="images/Projects/project2.webp"
+                  alt="Project 2"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #2</h3>
+                  <p>
+                    Data-Driven Marketing: A/B Testing & Conversion Optimization
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="images/Projects/project3.webp"
+                  alt="Project 3"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #3</h3>
+                  <p>SEO & Content Strategy for an E-Commerce Site</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- Arrow up -->
       <aside>
         <a href="#home" title="back to top">
-            <i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-arrow-up"></i>
         </a>
       </aside>
     </main>
     <!-- Footer -->
-    <footer id="Contact" class="section">
-        <h2 class="title">Contact me</h2>
-        <p class="description">hwmin24128@gmail.com</p>
-        <ul>
-            <li>
-                <a href="https://www.linkedin.com/in/hyewon-min-5ba581116/" target="_blank" title="my linkedin link">
-                    <i class="fa-brands fa-linkedin"></i>   
-            </a>
+    <footer id="contact" class="section">
+      <h2 class="title">Contact me</h2>
+      <p class="description">hwmin24128@gmail.com</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/hyewon-min-5ba581116/"
+            target="_blank"
+            title="my linkedin link"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </li>
-        </ul>
-        <p>©Hyewon Min - All rights reserved
-        </p>
+      </ul>
+      <p>©Hyewon Min - All rights reserved</p>
     </footer>
   </body>
 </html>
