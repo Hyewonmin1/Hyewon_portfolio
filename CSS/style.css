@@ -7,6 +7,13 @@
   --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
 
+  /* Background */
+  --home-bg-gradient: linear-gradient(
+    180deg,
+    rgba(8, 32, 73, 1) 0%,
+    rgba(5, 10, 19, 1) 100%
+  );
+
   /* Colors */
   --color-white: #ffffff;
   --color-black: #050a13;
@@ -125,11 +132,34 @@ button:focus {
 
 /* Home */
 #home {
+  position: relative;
   background-color: var(--color-primary);
+  background: var(--home-bg-gradient);
   color: var(--color-text);
   padding: 5rem 1rem;
   padding-top: 7rem;
   text-align: center;
+}
+
+.home__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.home__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 59px;
+}
+
+.home__divider .shape-fill {
+  fill: #ffffff;
 }
 
 .home__avatar {
@@ -256,12 +286,34 @@ button:focus {
 
 /* Skills*/
 #skills {
+  position: relative;
   background-color: var(--color-primary-variant);
   color: var(--color-text);
   padding: 4rem 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+}
+
+.skills__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.skills__divider svg {
+  position: relative;
+  display: block;
+  width: calc(124% + 1.3px);
+  height: 41px;
+}
+
+.skills__divider .shape-fill {
+  fill: var(--color-primary);
 }
 
 .skills {
@@ -322,8 +374,8 @@ button:focus {
 
 /* Work */
 #work {
-  background-color: var(--color-primary);
-  color: var(--color-text);
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 4rem 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -339,7 +391,7 @@ button:focus {
 
 .category {
   position: relative;
-  color: var(--color-text);
+  color: var(--color-black);
   font-size: 1rem;
   padding: 0.5rem 3rem;
   border-radius: 4px;
@@ -379,8 +431,8 @@ button:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  justify-content: center; /* 그리드 컨테이너를 가운데 정렬 */
-  justify-items: center; /* 그리드 아이템을 가운데 정렬 */
+  justify-content: center;
+  justify-items: center;
 }
 
 .project {
@@ -485,8 +537,29 @@ button:focus {
 
 /* Footer */
 #contact {
+  position: relative;
   background-color: var(--color-primary);
   color: var(--color-text);
+}
+
+.contact__divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact__divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 63px;
+}
+
+.contact__divider .shape-fill {
+  fill: #ffffff;
 }
 
 .contact__links {
